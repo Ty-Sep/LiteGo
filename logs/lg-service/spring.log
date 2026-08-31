@@ -1,0 +1,160 @@
+09:11:55:115  INFO 1588 --- [lg-service] [main] com.litego.LiteGoApplication             : Starting LiteGoApplication using Java 21.0.6 with PID 1588 (D:\workplace-idea\LiteGo\lg-service\target\classes started by 19354 in D:\workplace-idea\LiteGo)
+09:11:55:128 DEBUG 1588 --- [lg-service] [main] com.litego.LiteGoApplication             : Running with Spring Boot v3.5.8, Spring v6.2.14
+09:11:55:129  INFO 1588 --- [lg-service] [main] com.litego.LiteGoApplication             : The following 1 profile is active: "local"
+09:11:58:987  INFO 1588 --- [lg-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8002 (http)
+09:11:59:040  INFO 1588 --- [lg-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+09:11:59:041  INFO 1588 --- [lg-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.49]
+09:11:59:306  INFO 1588 --- [lg-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+09:11:59:307  INFO 1588 --- [lg-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4060 ms
+09:12:04:834  INFO 1588 --- [lg-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8002 (http) with context path '/'
+09:12:04:854  INFO 1588 --- [lg-service] [main] com.litego.LiteGoApplication             : Started LiteGoApplication in 11.005 seconds (process running for 13.381)
+09:13:53:673  INFO 1588 --- [lg-service] [http-nio-8002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:13:53:674  INFO 1588 --- [lg-service] [http-nio-8002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+09:13:53:676  INFO 1588 --- [lg-service] [http-nio-8002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+09:14:05:836  WARN 1588 --- [lg-service] [boundedElastic-2] s.w.s.m.m.a.RequestMappingHandlerAdapter : !!!
+Performing asynchronous handling through the default Spring MVC SimpleAsyncTaskExecutor.
+This executor is not suitable for production use under load.
+Please, configure an AsyncTaskExecutor through the WebMvc config.
+-------------------------------
+!!!
+09:14:28:133  INFO 1588 --- [lg-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+09:14:28:145  INFO 1588 --- [lg-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+09:14:35:692  INFO 14816 --- [lg-service] [main] com.litego.LiteGoApplication             : Starting LiteGoApplication using Java 21.0.6 with PID 14816 (D:\workplace-idea\LiteGo\lg-service\target\classes started by 19354 in D:\workplace-idea\LiteGo)
+09:14:35:696 DEBUG 14816 --- [lg-service] [main] com.litego.LiteGoApplication             : Running with Spring Boot v3.5.8, Spring v6.2.14
+09:14:35:697  INFO 14816 --- [lg-service] [main] com.litego.LiteGoApplication             : The following 1 profile is active: "local"
+09:14:38:550  INFO 14816 --- [lg-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8002 (http)
+09:14:38:580  INFO 14816 --- [lg-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+09:14:38:580  INFO 14816 --- [lg-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.49]
+09:14:38:767  INFO 14816 --- [lg-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+09:14:38:768  INFO 14816 --- [lg-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2967 ms
+09:14:42:469  INFO 14816 --- [lg-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8002 (http) with context path '/'
+09:14:42:486  INFO 14816 --- [lg-service] [main] com.litego.LiteGoApplication             : Started LiteGoApplication in 7.875 seconds (process running for 9.415)
+09:14:48:839  INFO 14816 --- [lg-service] [http-nio-8002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:14:48:839  INFO 14816 --- [lg-service] [http-nio-8002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+09:14:48:841  INFO 14816 --- [lg-service] [http-nio-8002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+09:14:49:097 ERROR 14816 --- [lg-service] [http-nio-8002-exec-1] c.l.common.advice.CommonExceptionAdvice  : 自定义异常 -> com.litego.common.exception.UnauthorizedException , 异常原因：token不合规  
+09:14:49:100 DEBUG 14816 --- [lg-service] [http-nio-8002-exec-1] c.l.common.advice.CommonExceptionAdvice  : 
+
+com.litego.common.exception.UnauthorizedException: token不合规
+	at com.litego.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:40) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.49.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.49.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+09:15:04:353  INFO 14816 --- [lg-service] [http-nio-8002-exec-3] com.litego.controller.UserController     : ===进入发送邮箱接口===
+09:15:04:601  INFO 14816 --- [lg-service] [http-nio-8002-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+09:15:05:163  INFO 14816 --- [lg-service] [http-nio-8002-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62c3edb2
+09:15:05:167  INFO 14816 --- [lg-service] [http-nio-8002-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+09:15:05:183 DEBUG 14816 --- [lg-service] [http-nio-8002-exec-3] c.litego.mapper.UserMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) AS total FROM user WHERE (email = ?)
+09:15:05:235 DEBUG 14816 --- [lg-service] [http-nio-8002-exec-3] c.litego.mapper.UserMapper.selectCount   : ==> Parameters: 1935464016@qq.com(String)
+09:15:05:290 DEBUG 14816 --- [lg-service] [http-nio-8002-exec-3] c.litego.mapper.UserMapper.selectCount   : <==      Total: 1
+09:15:05:306  INFO 14816 --- [lg-service] [http-nio-8002-exec-3] com.litego.controller.UserController     : 邮箱1935464016@qq.com的验证码：5328（是否已注册：true）
+09:15:06:997  INFO 14816 --- [lg-service] [email-1] com.litego.utils.EmailUtils              : 验证码邮件已发送至：1935464016@qq.com
+09:15:13:840 DEBUG 14816 --- [lg-service] [http-nio-8002-exec-4] c.litego.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,email,create_time,update_time,status,balance FROM user WHERE (email = ?)
+09:15:13:842 DEBUG 14816 --- [lg-service] [http-nio-8002-exec-4] c.litego.mapper.UserMapper.selectList    : ==> Parameters: 1935464016@qq.com(String)
+09:15:13:872 DEBUG 14816 --- [lg-service] [http-nio-8002-exec-4] c.litego.mapper.UserMapper.selectList    : <==      Total: 1
+09:15:33:958  WARN 14816 --- [lg-service] [boundedElastic-2] s.w.s.m.m.a.RequestMappingHandlerAdapter : !!!
+Performing asynchronous handling through the default Spring MVC SimpleAsyncTaskExecutor.
+This executor is not suitable for production use under load.
+Please, configure an AsyncTaskExecutor through the WebMvc config.
+-------------------------------
+!!!
+09:15:55:134 ERROR 14816 --- [lg-service] [http-nio-8002-exec-7] c.l.common.advice.CommonExceptionAdvice  : 自定义异常 -> com.litego.common.exception.UnauthorizedException , 异常原因：token不合规  
+09:15:55:135 DEBUG 14816 --- [lg-service] [http-nio-8002-exec-7] c.l.common.advice.CommonExceptionAdvice  : 
+
+com.litego.common.exception.UnauthorizedException: token不合规
+	at com.litego.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:40) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.49.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.14.jar:6.2.14]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.49.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.14.jar:6.2.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.49.jar:10.1.49]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+09:16:06:214  INFO 14816 --- [lg-service] [http-nio-8002-exec-8] c.l.service.impl.WeatherServiceImpl      : 【高德天气】查询天气预报，城市：广州市
+09:16:06:214  INFO 14816 --- [lg-service] [http-nio-8002-exec-8] c.l.service.impl.WeatherServiceImpl      : 【高德天气】请求URL：https://restapi.amap.com/v3/weather/weatherInfo?key=441e899bd7516a281ab828d9ac43f3e3&city=440100&extensions=all
+09:16:06:803  INFO 14816 --- [lg-service] [http-nio-8002-exec-8] c.l.service.impl.WeatherServiceImpl      : 【高德天气】查询成功
+09:16:06:805  INFO 14816 --- [lg-service] [http-nio-8002-exec-8] c.l.c.ChatAndScheduleController          : 传递给AI的天气信息：
+广州市 未来天气预报
+第1天(2026-04-16)：白天多云，夜间雷阵雨，气温23℃~29℃，风向：南
+第2天(2026-04-17)：白天大雨，夜间雷阵雨，气温23℃~27℃，风向：北
+第3天(2026-04-18)：白天多云，夜间多云，气温24℃~29℃，风向：北
+第4天(2026-04-19)：白天多云，夜间多云，气温23℃~29℃，风向：北
+
+09:17:34:859  INFO 14816 --- [lg-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+09:17:34:870  INFO 14816 --- [lg-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+09:17:34:878  INFO 14816 --- [lg-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+09:17:34:895  INFO 14816 --- [lg-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

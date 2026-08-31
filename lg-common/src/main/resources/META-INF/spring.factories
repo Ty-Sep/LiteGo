@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.litego.common.config.MyBatisConfig,\
+  com.litego.common.config.JsonConfig

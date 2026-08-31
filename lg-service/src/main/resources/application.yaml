@@ -1,0 +1,104 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: lg-service
+  ai:
+    openai:
+      #      api-key: ${OPENAI_API_KEY}
+      api-key: sk-c21af27e4ee444498c5aca3ac585dab3
+      base-url: https://dashscope.aliyuncs.com/compatible-mode
+      chat:
+        options:
+#          model: qwen3.5-plus
+#          max-tokens: 2048
+#          temperature: 0.5
+#          top-p: 0.8
+#          stream: true
+          model: deepseek-v3.2
+          enable-search: true
+
+      embedding:
+        options:
+          model: text-embedding-v3
+          dimensions: 1024
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 3954930188@qq.com
+    password: cpayccmtmaarcejh  # 授权码
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true  # 启用STARTTLS（587端口）
+    ssl:
+      enabled: true
+
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://${lg.db.host}:3306/lg-service?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: ${lg.db.pw}
+
+weather:
+  amap:
+    # 高德天气
+    url: https://restapi.amap.com/v3/weather/weatherInfo
+    key: 441e899bd7516a281ab828d9ac43f3e3
+
+amap:  # 高德地图
+  api:
+    key: 441e899bd7516a281ab828d9ac43f3e3
+
+feign:
+  okhttp:
+    enabled: true # 开启OKHttp功能
+mybatis-plus:
+  configuration:
+    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
+  global-config:
+    db-config:
+      update-strategy: not_null
+      id-type: auto
+logging:
+  level:
+    com.litego: debug
+  pattern:
+    dateformat: HH:mm:ss:SSS
+  file:
+    path: "logs/${spring.application.name}"
+knife4j:
+  enable: true
+  openapi:
+    title: 轻途接口文档
+    description: "接口文档"
+    email: 1935464016@qq.com
+    concat: 阿怪
+    url: https://www.baidu.com
+    version: v1.0.0
+    group:
+      default:
+        group-name: default
+        api-rule: package
+        api-rule-resources:
+          - com.litego.user.controller
+lg:
+  jwt:
+    location: classpath:litego.jks # 秘钥地址
+    alias: hmall # 秘钥别名
+    password: hmall123 # 秘钥文件密码
+    tokenTTL: 30m # 登录有效期
+  auth:
+    excludePaths: # 无需登录校验的路径
+      - /search/**
+      - /users/login/**
+#      - /ai/**   # 测试开放路径
+      - /v3/api-docs/**
+      - /webjars/**
+      - /doc.html
+      - /users/sendEmailMsg
+# keytool -genkeypair -alias hmall -keyalg RSA -keypass hmall123 -keystore hmall.jks -storepass hmall123
